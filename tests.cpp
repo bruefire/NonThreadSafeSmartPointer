@@ -5,7 +5,13 @@
 #include <time.h>
 #define SMART_POINTER_NTS_PRINT_LOG
 #include "smart_pointer_nts.h"
-using namespace smart_pointer_nts;
+
+#define SMART_POINTER_NTS_TEST
+#ifdef SMART_POINTER_NTS_TEST
+using namespace smart_pointer_nts; // run with nts smart pointers
+#else
+using namespace std; // run with STL smart pointers
+#endif
 
 
 struct test
